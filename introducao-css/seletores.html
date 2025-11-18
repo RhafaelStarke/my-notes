@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="" class="active">Seletores</a></li>
+                        <li><a href="../introducao-css/box-model.html">Box Model</a></li>
+                        <li><a href="../introducao-css/pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="../introducao-css/estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="../introducao-css/imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Seletores</h3>
+
+            <h4><b class="emphasis">class</b></h4>
+            <p>O atributo <b class="emphasis">class="..."</b>, refere-se a uma classe de tags, possibilitando a personalização de um conjunto de elementos.</p>
+
+            <h5><b class="emphasis">HTML</b></h5>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem"></span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    &lt;p class="my-class"&gt;...&lt;/p&gt;
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">CSS</b></h5>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .my-class {
+
+    }
+                </code></pre>
+            </div>
+
+            <h4><b class="emphasis">font</b></h4>
+
+            <h5><b class="emphasis">font-family</b></h5>
+            <p>Formata para a família da fonte.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        font-family: 'Times New Roman', Times, serif;
+    }
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">font-size</b></h5>
+            <p>Redefine o tamanho da fonte.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        font-size: 0.6em;
+    }
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">font-style</b></h5>
+            <p>Redefine o estilo da fonte, <i>itálico</i> por exemplo.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p{
+        font-style: italic;
+    }
+                </code></pre>
+            </div>
+            
+            <h5><b class="emphasis">font-weigth</b></h5>
+            <p>Define negrito para os textos.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        font-weight: bold;
+    }
+                </code></pre>
+            </div>
+
+            <h4><b class="emphasis">text</b></h4>
+
+            <h5><b class="emphasis">text-align</b></h5>
+            <p>Para alinhar os textos à esquerda, no centro ou na direita.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        text-align: left;
+    }
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">text-decoration</b></h5>
+            <p>Esse atributo altera alguns aspectos do texto, por exemplo:</p>
+            <ul>
+                <li><b class="emphasis">none</b>: remove qualquer decoração padrão.</li>
+                <li><b class="emphasis">underline</b>: adicione uma linha abaixo do texto.</li>
+                <li><b class="emphasis">line-through</b>: adiciona uma linha que passa pelo meio do texto.</li>
+                <li><b class="emphasis">overline</b>: adiciona uma linha acima do texto.</li>
+            </ul>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        text-decoration: underline;
+    }
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">text-ident</b></h5>
+            <p>Define identação no início de cada parágrafo.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        text-ident: 1.5em;
+    }
+                </code></pre>
+            </div>
+
+            <h5><b class="emphasis">text-transform</b></h5>
+            <p>Esse atributo tem a função de transformar alguns aspectos dos textos.</p>
+            <ul>
+                <li><b class="emphasis">uppercase</b>: permite transformar o texto em maiúsculo.</li>
+                <li><b class="emphasis">lowercase</b>: permite transformar o texto em minúsculo.</li>
+                <li><b class="emphasis">capitalize</b>: converte a primeira letra de cada palavra para maiúsculo.</li>
+                <li><b class="emphasis">none</b>: remove qualquer característica padrão do atributo.</li>
+            </ul>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        text-transform: uppercase;
+    }
+                </code></pre>
+            </div>
+
+            <h4><b class="emphasis">color</b></h4>
+            <p>Define a cor do texto.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        color: #9acd32;
+    }
+                </code></pre>
+            </div>
+
+            <h4><b class="emphasis">background-color</b></h4>
+            <p>Define a cor de fundo do elemento.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    p {
+        background-color: #9acd32;
+    }
+                </code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

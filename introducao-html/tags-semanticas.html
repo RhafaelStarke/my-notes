@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes - Introdução HTML</title>
+</head>
+<body>
+    <header>
+        <h1>My Notes</h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="principais-tags.html">Principais Tags</a></li>
+                        <li><a href="" class="active">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-css/seletores.html">Seletores</a></li>
+                        <li><a href="../introducao-css/box-model.html">Box Model</a></li>
+                        <li><a href="../introducao-css/pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="../introducao-css/estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="../introducao-css/imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Exemplo</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">exemplo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="paper-a4">
+        <article>
+            <section>
+                <h1>Curso de Web Developer</h1>
+                <h2>Rhafael da Cruz Starke</h2>
+                <h3>Tags Semânticas</h3>
+            
+
+                <h4>Wireframe</h4>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;header&gt;</b></h5>
+                <p>Sua função principal é definir um cabeçalho ou uma seção introdutória para o seu conteúdo.</p>
+
+                <h6>O que vai dentro da tag <b class="emphasis">&lt;header&gt;</b>?</h6>
+                <p>O <b class="emphasis">&lt;header&gt;</b> é um conteiner. Dentro dele, você normalmente coloca os iten introdutórios, como: </p>
+                <ul>
+                    <li>Logo do site (uma <b class="emphasis">&lt;img&gt;</b> dentro de um link <b class="emphasis">&lt;a&gt;</b>).</li>
+                    <li>Título principal da página (<b class="emphasis">&lt;h1&gt;</b>).</li>
+                    <li>Menu de navegação (usando a tag <b class="emphasis">&lt;nav&gt;</b>).</li>
+                    <li>Slogan do site (um <b class="emphasis">&lt;p&gt;</b> ou <b class="emphasis">&lt;span&gt;</b>).</li>
+                    <li>Um formulário de busca.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;nav&gt;</b></h5>
+                <p>A função principal da tag <b class="emphasis">&lt;nav&gt;</b> (abreviação de "navigation" ou navegação) é identificar um bloco de links que serve como navegação principal do seu site ou de uma página.</p>
+
+                <h6>O que vai dentro da tag <b class="emphasis">&lt;nav&gt;</b>?</h6>
+                <p>Quase sempre o conteúdo de uma tag <b class="emphasis">&lt;nav&gt;</b> é uma lista não ordenada (<b class="emphasis">&lt;ul&gt;</b>) de links (<b class="emphasis">&lt;a&gt;</b>).</p>
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">HTML</span>
+                    </div>
+                    <pre class="codigo"><code class="language-html">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="caminho/home.html"&gt;Página Inicial&lt;/a&gt;
+        &lt;li&gt;&lt;a href="caminho/sobre.html"&gt;Sobre Nós&lt;/a&gt;
+        &lt;li&gt;&lt;a href="caminho/contato.html"&gt;Contato&lt;/a&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code></pre>
+                </div>
+
+                <h6>Onde a tag <b class="emphasis">&lt;nav&gt;</b> é usada?</h6>
+                <p>A tag <b class="emphasis">&lt;nav&gt;</b> é usada para navegação principal. Os locais mais comuns são:</p>
+                <ol>
+                    <li><b>Dentro do <b class="emphasis">&lt;header&gt;</b>:</b> este é o uso mais frequente. O <b class="emphasis">&lt;header&gt;</b> contém o logo e a navegação principal, e a <b class="emphasis">&lt;nav&gt;</b> envolve os links do menu.</li>
+                    <li><b>Como uma barra lateral:</b> se o seu site tem uma navegação lateral, a tag <b class="emphasis">&lt;aside&gt;</b> pode conter uma tag <b class="emphasis">&lt;nav&gt;</b>.</li>
+                    <li><b>Para navegação na página:</b> em uma página longa, você pode ter um <b class="emphasis">&lt;nav&gt;</b> com um índice (links para seções da própria página, como <b class="emphasis">href="#secao1"</b>).</li>
+                </ol>
+
+                <h6>Importante!</h6>
+                <p>A tag <b class="emphasis">&lt;nav&gt;</b> não deve ser usado para qualquer grupo de links. Ela é reservada para blocos de navegação principais.</p>
+                <ul>
+                    <li><b>Evite</b> usá-la para uma lista simples de links sociais no rodapé. O <b class="emphasis">&lt;footer&gt;</b> por si só já é seemântico o suficiente.</li>
+                    <li><b>Evite</b> usá-la para links de paginação (Próximo, Anterior, 1, 2, 3...).</li>
+                    <li><b>Evite</b> usá-la para links dentro do conteúdo de um artigo.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;main&gt;</b></h5>
+                <p>A tag <b class="emphasis">&lt;main&gt;</b> serve para envolver o conteúdo principal e único daquele documento HTML específico.</p>
+                <p>Diferentemente de <b class="emphasis">&lt;div&gt;</b>, <b class="emphasis">&lt;section&gt;</b> ou <b class="emphasis">&lt;article&gt;</b>, que pode usar quantas vezes quiser, a tag <b class="emphasis">&lt;main&gt;</b> tem uma regra especial: só deve exister UM elemente <b class="emphasis">&lt;main&gt;</b> visivel por página.</p>
+
+                <h6>O que vai dentro da tag <b class="emphasis">&lt;main&gt;</b>?</h6>
+                <ul>
+                    <li>O conteúdo exclusivo daquela página.</li>
+                    <li>Artigos, seções de texto, imagens do conteúdo, vídeos principais...</li>
+                </ul>
+
+                <h6>O que não vai dentro da tag <b class="emphasis">&lt;main&gt;</b>?</h6>
+                <ul>
+                    <li>Conteúdo que se repete em todas as páginas (logos, menus de navegação principais, avisos de copyright, rodapés globais).</li>
+                    <li>Barras de laterais (<b class="emphasis">&lt;aside&gt;</b>) que contêm links de navegação ou publicidade genérica.</li>
+                </ul>
+
+                <h6>Onde se encaixa na estrutura?</h6>
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">HTML</span>
+                    </div>
+                    <pre class="codigo"><code class="language-html">
+&lt;body&gt;
+    &lt;header&gt;...&lt;/header&gt;
+
+    &lt;nav&gt;...&lt;/nav&gt;
+
+    &lt;main&gt;
+        &lt;h1&gt;Título do Artigo&lt;/h1&gt;
+        &lt;p&gt;Conteúdo exclusivo desta página...&lt;/p&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Subtítulo&lt;/h2&gt;
+            &lt;p&gt;Mais conteúdo...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;footer&gt;</b></h5>
+                <p>A tag <b class="emphasis">&lt;footer&gt;</b> define o rodapé de um documento ou de uma seção. Ela contém informações de fechamento sobre o conteúdo que ela envolve.</p>
+
+                <h6>Os Dois Lugares Onde o <b class="emphasis">&lt;footer&gt;</b> Vive</h6>
+                <p>Assim como o <b class="emphasis">&lt;header&gt;</b>, o <b class="emphasis">&lt;footer&gt;</b> é versátil e pode ser usado em dois contextos diferentes:</p>
+                <ol class="sorted-alpha">
+                    <li><b>O rodapé da página global</b>: quando o <b class="emphasis">&lt;footer&gt;</b> é filho direto do <b class="emphasis">&lt;body&gt;</b>, ele representa o radapé do site inteiro. Geralmente é a última coisa que aparece na tela.</li>
+                    <li><b>O radapé de uma seção (local)</b>: você pode colocar um <b class="emphasis">&lt;footer&gt;</b> dentro de um <b class="emphasis">&lt;article&gt;</b> ou <b class="emphasis">&lt;section&gt;</b>. Nesse caso, ele contém informações específicas apenas sobre aquele pedaço de conteúdo (como autor do artigo ou a data de publicação).</li>
+                </ol>
+
+                <h6>O Que Geralmente Vai Dentro de um <b class="emphasis">&lt;footer&gt;</b>?</h6>
+                <ul>
+                    <li><b>Direitos autorais (Copyright): </b>&copy;2025 Sua Empresa.</li>
+                    <li><b>Informações de contato: </b>e-mail, endereço físico.</li>
+                    <li><b>Links legais: </b>política de privacidade, termos de uso.</li>
+                    <li><b>Redes sociais: </b>links para Instagram, LinkedIn, GitHub.</li>
+                    <li><b>Mapa do site: </b>uma lista de links importantes para ajudar na navegação.</li>
+                    <li><b>A tag <b class="emphasis">&lt;address&gt;: </b></b>é muito comum colocar a tag <b class="emphasis">&lt;address&gt;</b> (que define informações de contato) dentro do <b class="emphasis">&lt;footer&gt;</b>.</li>
+                </ul>
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">HTML</span>
+                    </div>
+                    <pre class="codigo"><code class="language-html">
+&lt;footer&gt;
+    &lt;div class="social-links"&gt;
+        &lt;a href="#"&gt;Facebook&lt;/a&gt;
+        &lt;a href="#"&gt;Instagram&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&copy 2025. Todos os direitos reservados. &lt;/p&gt;
+
+    &lt;address&gt;
+        Contato: suporte@exemplo.com
+    &lt;/address&gt;
+&lt;/footer&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;article&gt;</b></h5>
+                <p>A tag <b class="emphasis">&lt;article&gt;</b> deve ser usada para envolver um conteúdo que faz sentido por si só, mesmo se você o retirasse do seu site e colocasse em outro lugar (como um leitor de RSS ou compartilhasse no WhatsApp).</p>
+                <ul>
+                    Exemplos de uso:
+                    <li>Um post de blog completo.</li>
+                    <li>Uma notícia.</li>
+                    <li>Um comentário de um usuário em um fórum.</li>
+                    <li>Um cartão de produto em uma loja virtual (tem foto, preço e nome.).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;section&gt;</b></h5>
+                <p>A tag <b class="emphasis">&lt;section&gt;</b> serve para agrupar conteúdos que compartilham um mesmo tema. Ela é uma divisão lógica do seu documento.</p>
+                <p>Diferente do <b class="emphasis">&lt;article&gt;</b>, uma <b class="emphasis">&lt;section&gt;</b> geralmente não faz sentido se estiver isolada. Ela faz parte de um todo.</p>
+                <ul>
+                    Exemplos de uso:
+                    <li>Capítulos de um texo.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h5><b class="emphasis">&lt;aside&gt;</b></h5>
+                <p>A tag <b class="emphasis">&lt;aside&gt;</b> é para conteúdo que está relacionado ao conteúdo principal, mas que não é o foco principal. Se você remover o <b class="emphasis">&lt;aside&gt;</b>, o conteúdo principal ainda deve fazer sentido.</p>
+                <p>Pense nele como aquelas caixas laterais em revistas com "Curiosidadees" ou "Saiba mais".</p>
+                <ul>
+                    Exemplos de uso:
+                    <li><b>Barras laterais (sidebars): </b>menus laterais, listas de categorias, propaganda.</li>
+                    <li><b>Box de informações: </b>um quadro "Você sabia?" dentro de um artigo.</li>
+                    <li><b>Glossário: </b>explicação de um termo difícil ao lado do texto.</li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">HTML</span>
+                    </div>
+                    <pre class="codigo"><code class="language-html">
+&lt;body&gt;
+    &lt;header&gt;...&lt;/header&gt;
+
+    &lt;nav&gt;...&lt;/nav&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+        
+            &lt;h1&gt;Título do Artigo&lt;/h1&gt;
+            &lt;p&gt;Conteúdo exclusivo desta página...&lt;/p&gt;
+
+            &lt;section&gt;
+                &lt;h2&gt;Subtítulo&lt;/h2&gt;
+                &lt;p&gt;Mais conteúdo...&lt;/p&gt;
+            &lt;/section&gt;
+
+        &lt;/article&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+                    </code></pre>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

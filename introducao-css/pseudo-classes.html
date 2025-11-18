@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <style>
+        .a-exemple:link {
+            color: #5eff00;
+            text-decoration: none;
+        }
+
+        .a-exemple:visited {
+            color: #ff0000;
+        }
+
+        .a-exemple:hover {
+            color: #0800ff;
+            text-decoration: underline;
+        }
+
+        .a-exemple:active {
+            color: #ffd700;
+        }
+    </style>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seletores.html">Seletores</a></li>
+                        <li><a href="box-model.html">Box Model</a></li>
+                        <li><a href="" class="active">Pseudo Classes</a></li>
+                        <li><a href="estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Pseudo Classes</h3>
+            <p>Pseudo-classes nos permite estilizar elementos com base em seu estado ou condição, e não apenas em sua identidade, como tag classe ou id.</p>
+
+            <h4><b class="emphasis">&lt;a&gt;</b></h4>
+            <p>Um bom exemplo para isso é a tag <b class="emphasis">&lt;a&gt;</b>, um link pode estar em diferentes estados durante a interação do usuário.</p>
+
+            <h5><b class="emphasis">:link</b></h5>
+            <p>Representa o estado de um link que ainda não foi visitado pelo usuário.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .a:link {
+        color: #0000ff;
+        text-decoration: none;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <ul>
+                <li><a href="#" class="a-exemple">Exemplo de um link</a>.</li>
+            </ul>
+
+            <h5><b class="emphasis">:visited</b></h5>
+            <p>Representa o estado de um link que já foi visitado.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .a:visited {
+        color: #6a0dad;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <ul>
+                <li><a href="#" class="a-exemple">Exemplo de um link</a>.</li>
+            </ul>
+
+            <h5><b class="emphasis">:hover</b></h5>
+            <p>Representa o estado quando o usuário passa o cursor do mouse sobre o link.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .a:hover {
+        color: #0800ff;
+        text-decoration: underline;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <ul>
+                <li><a href="#" class="a-exemple">Exemplo de um link</a>.</li>
+            </ul>
+
+            <h5><b class="emphasis">:active</b></h5>
+            <p>Representa o estado quando o link está sendo ativamente clicado, no momento em que o botão do mouse é pressionado até ser solto.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .a:active {
+        color: #ffd700;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <ul>
+                <li><a href="#" class="a-exemple">Exemplo de um link</a>.</li>
+            </ul>
+
+            <h4>A Ordem</h4>
+            <p>Quando você define os estilos para os estados de um link, a ordem em que você escreve as regras no seu arquivo <b class="emphasis">CSS</b> é crucial. Se a ordem estiver errada, alguns estilos não funcionarão como esperado por causa das regras de especificidade do <b class="emphasis">CSS</b>.</p>
+            <p>A ordem é: </p>
+            <ol>
+                <li><b class="emphasis">:link</b></li>
+                <li><b class="emphasis">:visited</b></li>
+                <li><b class="emphasis">:hover</b></li>
+                <li><b class="emphasis">:active</b></li>
+            </ol>
+
+            <h4>Outras Pseudo-classes Essenciais</h4>
+            <p>O conceito de pseudo-classes se aplica a quase todos os elementos, não apenas a de links. Algumas outras muito importantes são: </p>
+            <ul>
+                <li><b class="emphasis">:focus</b>: aplica um estilo quando um elemento está em foco (selecionado via teclado com a tecla <b class="emphasis">tab</b>).</li>
+                <li><b class="emphasis">:first-child</b>: seleciona um elemento um elemento que é o primeiro filho de seu pai.</li>
+                <li><b class="emphasis">:last-child</b>: seleciona um elemento que é o último filho do seu pai.</li>
+                <li><b class="emphasis">:nth-child(n)</b>: seleciona elementos com base em sua posição. Ex: <b class="emphasis">nth-child(even)</b> seleciona os filhos pares (ótimo para zebrar tabelas).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

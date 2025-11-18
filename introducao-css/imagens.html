@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seletores.html">Seletores</a></li>
+                        <li><a href="box-model.html">Box Model</a></li>
+                        <li><a href="pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="" class="active">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Trabalhando com Imagens e Formatos</h3>
+
+            <h4>Images Vetoriais vs Bitmap</h4>
+            <p>Imagens bitmap são formadas por pixels, enquanto imagens vetoriais são definidas por fórmulas matemáticas, usando formas geométricas, linhas e curvas. Como resultado disso, bitmap está limitado à sua definição padrão, enquanto imagens vetoriais se adequam ao tamanho que for necessário, sem abrir mão da definição.</p>
+            <p>Exemplo: </p>
+
+            <div class="container">
+                <div class="subcontainer">
+                    <p>Bitmap</p>
+                    <img id="logo-serfrontend" src="../assets/image/logo_ser-frontend-ico.png" alt="Logotipo serfrontend.">
+                </div>
+                <div class="subcontainer">
+                    <p>Vetorial</p>
+                    <img id="logo-serfrontend" src="../assets/image/logo_ser-frontend-ico.svg" alt="Logotipo serfrontend vetorizada.">
+                </div>
+            </div>
+
+            <h4>Transparência com Gif e Png</h4>
+            <p>Arquivos PNG suportam milhões de cores e diversos graus de transparência, além de oferecerem melhor legibilidade do que GIF.</p>
+
+            <div class="container">
+                <div class="subcontainer">
+                    <p style="color: #ffffff;">GIF</p>
+                    <img id="logo-serfrontend" src="../assets/image/logo_ser-frontend-ico-transparente.gif" alt="">
+                </div>
+                <div class="subcontainer">
+                    <p style="color: #ffffff;">PNG</p>
+                    <img id="logo-serfrontend" src="../assets/image/logo_ser-frontend-ico-transparente.png" alt="">
+                </div>
+            </div>
+
+            <h4>Float</h4>
+            <p>O float em CSS fazem a imagem sair do fluxo normal do texto e se posicionar ao lado esquerdo ou direito do seu contêiner, permitindo que outros elementos, como o texto, contornem e se ajustem ao redor dela. </p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">HTML</span>
+                </div>
+                <pre class="codigo"><code class="language-html">
+    &lt;img src="sua-imagem.jpg" alt="descrição da imagem" class="float-image"&gt;
+                </code></pre>
+            </div>
+            <br>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    .float-image {
+        float: left;
+        margin 0 10px 10px 0;
+    }
+                </code></pre>
+            </div>
+            <br>
+            <img src="../assets/image/css3.png" alt="Logotipo CSS3" class="logo-css">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero error officia similique minus, impedit dicta atque ullam recusandae doloribus aliquam tempore fugiat dolorem optio laborum repellat sed assumenda nobis veritatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut totam doloribus, saepe atque molestias quia officiis corrupti laudantium hic nulla rem, optio eius iure quo esse eligendi, exercitationem nihil? Libero.</p>
+            <img src="../assets/image/html5.png" alt="Logotipo HTML5" class="logo-html">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quibusdam similique libero explicabo obcaecati nesciunt voluptas. Tempore repellat voluptates earum, atque voluptate fuga, quas quaerat perferendis quos pariatur nam eius.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ex distinctio exercitationem iusto iste expedita animi amet culpa minus velit quae soluta dolorem facere sapiente veritatis quibusdam veniam mollitia ut.</p>
+            
+            <h4>background-image</h4>
+            <p>Pense na <b class="emphasis">background-image</b> como uma verdadeira tela de pintura, onde você pode adicionar camadas, gradientes, texturas e efeitos.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+    }
+                </code></pre>
+            </div>
+
+            <h4>background-repeat</h4>
+            <ul>
+                <li><b class="emphasis">repeat</b>: a imagem irá se repetir.</li>
+                <li><b class="emphasis">no-repeat</b>: a imagem não irá se repetir.</li>
+                <li><b class="emphasis">repeat-x</b>: a imagem irá se repetir somente no eixo x.</li>
+                <li><b class="emphasis">repeat-y</b>: a imagem irá se repetir somente no eixo y.</li>
+            </ul>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: repeat; /*padrão*/
+        background-repeat: no-repeat;
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+    }
+                </code></pre>
+            </div>
+
+            <h4>background-size</h4>
+            <p>Controla o tamanho da imagem com as seguintes propriedades.</p>
+
+            <h5>auto</h5>
+            <p>Faz com que a imagem de fundo mantenha seu tamanho original, sem esticar ou cortar. É o valor padrão da propriedade.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+                </code></pre>
+            </div>
+
+            <h5>cover</h5>
+            <p>Redimensiona uma imagem de fundo para cobrir completamente seu contêiner, preservando a proporção original da imagem, mesmo que isso signifique que parte da imagem seja cortada. O objetivo é não deixar nenhum espaço vazio e garantir que o fundo sempre preencha toda a área, ajustando-se dinamicamente às proporpoções do contêiner.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+                </code></pre>
+            </div>
+
+            <h5>contain</h5>
+            <p>Redimensiona uma imagem de fundo para o maior tamanho possível, mantendo suas proporções originais, garantindo que ela caiba completamente dentro da área do elemento. Isso significa que, dependendo das proporções da imagem e do elemento, podem aparecer áreas vazias ao redor da imagem, pois ela é redimensionada para não ser cortada.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+                </code></pre>
+            </div>
+
+            <h5>50%</h5>
+            <p>Redimensiona a imagem de fundo para 50% da largura do elemento pai e, como apenas um valor valor foi especificado, a altura é automaticamente ajustada para manter a proporção da imagem original, evitando distorções.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+                </code></pre>
+            </div>
+            
+            <h5>100px</h5>
+            <p>Define que a imagem de fundo do elemento terá a largura de 100 pixels, e a altura será definida automaticamente para manter a proporção original da imagem.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100px;
+    }
+                </code></pre>
+            </div>
+
+            <h4>background-position</h4>
+            <p>A propriedade <b class="emphasis">background-position</b> define a posição inicial de uma imagem de fundo de um elemento <b class="emphasis">HTML</b>, permitindo que ela seja movida para diferentes locais usando valores de palavras chaves (como <b class="emphasis">top</b>, <b class="emphasis">right</b>, <b class="emphasis">bottom</b>, <b class="emphasis">left</b>, <b class="emphasis">center</b>), porcentagens, ou unidades de medida como pixels. Você especifica a posição horizontal (eixo X) e a posição vertical (eixo Y), onde o primeiro valor é para o eixo X e o segundo o eixo Y, como em <b>background-position: 50% 50%</b> para centralizar a imagem.</p>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+    }
+                </code></pre>
+            </div>
+
+            <h5>background-attachment</h5>
+            <p>A propriedade <b class="emphasis">background-attachment</b> no <b class="emphasis">CSS</b> define se a imagem de fundo de um elemento permanecerá fixa em relação à tela (viewport) ou se rolará junto com o cconteúdo. Os valores principais são:</p>
+            <ul>
+                <li><b class="emphasis">scroll</b>: a imagem rola com o conteúdo, sendo padrão.</li>
+                <li><b class="emphasis">fixed</b>: a imagem fica fixa na tela mesmo com a rolagem.</li>
+                <li><b class="emphasis">local</b> a imagem rola com o conteúdo do próprio elemento, mas se comporta de forma diferente de <b class="emphasis">scroll</b> em elementos com overflow.</li>
+            </ul>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="language">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    body {
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        background-attachment: fixed;
+    }
+                </code></pre>
+            </div>
+            <p>Este exemplo acima foi o que usamos para inserir essa imagem de coqueiro no fundo da nossa página.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

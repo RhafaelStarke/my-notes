@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes -  Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seletores.html">Seletores</a></li>
+                        <li><a href="box-model.html">Box Model</a></li>
+                        <li><a href="pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="" class="active">Estilo de Lista</a></li>
+                        <li><a href="imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Estilo de Lista</h3>
+            
+            <h4><b class="emphasis">list-style</b></h4>
+            <p>Da mesma forma que todos os outros elememtos, a tag <b class="emphasis">&lt;ul&gt;</b> e <b class="emphasis">&lt;ol&gt;</b> tem seus estilos aplicáveis. Com o elemento <b class="emphasis">list-style</b> conseguimos alterar algumas características das listas no <b class="emphasis">CSS</b>.</p>
+
+            <h5><b class="emphasis">list-style-type</b></h5>
+            <p>Define a aparência do marcador.</p>
+            <h6><b class="emphasis">&lt;ul&gt;</b></h6>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-ul {
+        list-style-type: disc;
+        list-style-type: circle;
+        list-style-type: square;
+        list-style-type: none;
+    }
+                </code></pre>
+            </div>
+            <ul>
+                <li style="list-style-type: disc;"><b class="emphasis">disc</b>: um circulo preenchido (default).</li>
+                <li style="list-style-type: circle;"><b class="emphasis">circle</b>: um circulo vazio.</li>
+                <li style="list-style-type: square;"><b class="emphasis">square</b>: um quadrado preenchido.</li>
+                <li style="list-style-type: none;"><b class="emphasis">none</b>: remove o marcador (muito usado para menu de navegações).</li>
+            </ul>
+            <h6><b class="emphasis">&lt;ol&gt;</b></h6>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-ol {
+        list-style-type: decimal;
+        list-style-type: decimal-leading-zero;
+        list-style-type: lower-roman;
+        list-style-type: upper-roman;
+        list-style-type: lower-alpha;
+        list-style-type: upper-alpha;
+        list-style-type: lower-latin;
+        list-style-type: upper-latin;
+        list-style-type: lower-greek;
+    }
+                </code></pre>
+            </div>
+            <ol>
+                <li style="list-style-type: decimal;"><b class="emphasis">decimal</b>: numeros decimais (default).</li>
+                <li style="list-style-type: decimal-leading-zero;"><b class="emphasis">decimal-leading-zero</b>: números decimais com um zero à esquerda para números de um dígito (01 à 09).</li>
+                <li style="list-style-type: lower-roman;"><b class="emphasis">lower-roman</b>: algarismo romanos em minúsculas.</li>
+                <li style="list-style-type: upper-roman;"><b class="emphasis">upper-roman</b>: algarismo romanos em maiúsculas.</li>
+                <li style="list-style-type: lower-alpha;"><b class="emphasis">lower-alpha</b>: letras do alfabeto em minúsculas.</li>
+                <li style="list-style-type: upper-alpha;"><b class="emphasis">upper-alpha</b>: letras do alfabeto em maiúsculas.</li>
+                <li style="list-style-type: lower-greek;"><b class="emphasis">lower-greek</b>: letras do alfabeto grego em minúsculas.</li>
+            </ol>
+
+            <h5><b class="emphasis">list-style-position</b></h5>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

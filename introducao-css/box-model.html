@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <style>
+        #exemple-width-height {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+        }
+
+        #exemple-padding {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+            padding: 25px;
+        }
+
+        #exemple-border {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+            padding: 25px;
+            border: 10px solid #aaff00;
+        }
+
+        #exemple-margin {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+            padding: 25px;
+            border: 10px solid #aaff00;
+            margin: auto;
+        }
+
+        #exemple-outline {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+            padding: 25px;
+            border: 10px solid #aaff00;
+            margin: auto;
+            outline: 5px dashed #ff0000;
+            outline-offset: 5px;
+        }
+
+        #exemple-box-sizing {
+            width: 250px;
+            height: 25px;
+            background-color: #9acd32;
+            padding: 25px;
+            border: 10px solid #aaff00;
+            margin: auto;
+            outline: 5px dashed #ff0000;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-css/seletores.html">Seletores</a></li>
+                        <li><a href="" class="active">Box Model</a></li>
+                        <li><a href="../introducao-css/pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="../introducao-css/estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="../introducao-css/imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Box Model</h3>
+
+            <h4><b class="emphasis">width</b> e <b class="emphasis">height</b></h4>
+            <p>Esta é a área onde o conteúdo real aparece.</p>
+            <ul>
+                <li><b class="emphasis">width</b>: define a largura da área do conteúdo.</li>
+                <li><b class="emphasis">height</b>: a altura da área do conteúdo.</li>
+            </ul>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-width-height {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado:</p>
+            <p id="exemple-width-height">Lorem ipsum dolor sit amet.</p>
+
+            <h4><b class="emphasis">padding</b></h4>
+            <p>É o espaçamento interno da caixa. Ele cria um espaço entre o conteúdo e a borda. O <b class="emphasis">padding</b> assume a cor de fundo do elemento.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-padding {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+        padding: 25px;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <p id="exemple-padding">Lorem ipsum dolor sit amet.</p>
+
+            <h4><b class="emphasis">border</b></h4>
+            <p>É a moldura da sua caixa, localizada entre o <b class="emphasis">padding</b> e o <b class="emphasis">margin</b>. A borda pode ter espessura, estilo e cor, respectivamente.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-border {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+        padding: 25px;
+        border: 10px solid #aaff00;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <p id="exemple-border">Lorem ipsum dolor sit amet.</p>
+
+            <h4><b class="emphasis">margin</b></h4>
+            <p>É o espaçamento externo da caixa. Ele cria um espaço entre a sua caixa e os elementos vizinhos. A margem é sempre transparente, empurrando os outros elementos para longe.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-margin {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+        padding: 25px;
+        border: 10px solid #aaff00;
+        margin: auto;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <p id="exemple-margin">Lorem ipsum dolor sit amet.</p>
+
+            <h4><b class="emphasis">outline</b></h4>
+            <p>O <b class="emphasis">outline</b> é uma linha desenhada fora da borda. Ele é muito parecido com o <b class="emphasis">border</b>, mas tem sua diferença crucial: O <b class="emphasis">outline</b> não ocupa espaço, ele não afeta o layout da página e não empurra os outros elementos. Ele é desenhado "por cima" do espaço da margin.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-outline {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+        padding: 25px;
+        border: 10px solid #aaff00;
+        margin: auto;
+        outline: 5px dashed #ff0000;
+        outline-offset: 5px;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <p id="exemple-outline">Lorem ipsum dolor sit amet.</p>
+
+            <h4><b class="emphasis">box-sizing</b></h4>
+            <p>Por padrão no <b class="emphasis">CSS</b>, quando você define o tamanho do <b class="emphasis">width</b>, o <b class="emphasis">padding</b> e o <b class="emphasis">border</b> são somados a esse valor.</p>
+            <ul>
+                <li>Largura total = <b class="emphasis">width</b> + <b class="emphasis">padding-left</b> + <b class="emphasis">padding-right</b> + <b class="emphasis">border-left</b> + <b class="emphasis">border-right</b></li>
+            </ul>
+            <p>Portanto, a melhor prática é utilizar <b class="emphasis">border-box</b>. Com ele, o <b class="emphasis">padding</b> e o <b class="emphasis">border</b> são incluídos dentro da largur que você definiu.</p>
+            <p>Se você definiu a largura (<b class="emphasis">width</b>) com 200 píxels, a caixa inteira, incluindo <b class="emphasis">padding</b> e o <b class="emphasis">border</b> terá o valor defido da largura. O próprio <b class="emphasis">CSS</b> ajusta o espaço do conteúdo que caiba tudo.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+    #exemple-box-sizing {
+        width: 250px;
+        height: 25px;
+        background-color: #9acd32;
+        padding: 25px;
+        border: 10px solid #aaff00;
+        margin: auto;
+        outline: 5px dashed #ff0000;
+        box-sizing: border-box;
+    }
+                </code></pre>
+            </div>
+            <p>Resultado: </p>
+            <p id="exemple-box-sizing">Lorem ipsum dolor.</p>
+
+            <h4><b class="emphasis">display</b></h4>
+            <h5><b class="emphasis">block</b></h5>
+            <p>Alguns elementos, como <b class="emphasis">&lt;p&gt;</b>, <b class="emphasis">&lt;h&gt;</b>, <b class="emphasis">&lt;ul&gt;</b>, <b class="emphasis">&lt;ol&gt;</b>, <b class="emphasis">&lt;li&gt;</b> e outros são, por padrão, elementos <b class="emphasis">block</b>. Isso significa que vão ocupar toda a largura do elemento pai, e vão gerar quebra de linha.</p>
+            <p>Exemplo: </p>
+            <p style="background-color: #9acd32;">Lorem ipsum dolor sit amet.</p>
+
+            <h5><b class="emphasis">inline</b></h5>
+            <p>Já outros, como <b class="emphasis">&lt;a&gt;</b>, <b class="emphasis">&lt;b&gt;</b>, <b class="emphasis">&lt;strong&gt;</b>, <b class="emphasis">&lt;i&gt;</b>, <b class="emphasis">&lt;em&gt;</b> e outros, são, por padrão, elementos <b class="emphasis">inline</b>. Isso significa que não gerar  quebra de linha e irão ocupar apenas o espaço necessários para cabê-los.</p>
+
+            <h5><b class="emphasis">display</b></h5>
+            <p>Utilizando da propriedade <b class="emphasis">display</b> você consegue alterar o valor padrão do elemento.</p>
+            <ul>
+                <li><b class="emphasis">inline</b>: altera os elementos em blocos para elementos em linha.</li>
+                <li><b class="emphasis">block</b>: altera os elementos em linha para elementos em blocos.</li>
+                <li><b class="emphasis">inline-block</b>: faz com que elememtos em linha possam receber características de em bloco (<b class="emphasis">padding</b> e <b class="emphasis">margin</b>, por exemplo).</li>
+                <li><b class="emphasis">none</b>: remove o elemento da tela.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

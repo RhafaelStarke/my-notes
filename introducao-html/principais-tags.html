@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes - Introdução ao HTML</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="" class="active">Principais Tags</a></li>
+                        <li><a href="tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-css/seletores.html">Seletores</a></li>
+                        <li><a href="../introducao-css/box-model.html">Box Model</a></li>
+                        <li><a href="../introducao-css/pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="../introducao-css/estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="../introducao-css/imagens.html">Imagens</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="paper-a4">
+        <article>
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Principais Tags do HTML</h3>
+
+            <section>
+            <h4><b class="emphasis">&lt;HTML&gt;</b></h4>
+            <p>A primeira coisa que você ter em mente é que o <b class="emphasis">HTML</b> é uma linguagem única e exclusivamente para a semântica, ou seja, para dar significado aos elementos.</p>
+
+            <h4><b class="emphasis">&lt;h&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;h&gt;</b> serve para definir a hierarquia de um texto, por exemplo: </p>
+            <ul>
+                <li><b class="emphasis">&lt;h1&gt;</b><ul>
+                        <li><b class="emphasis">&lt;h2&gt;</b><ul>
+                            <li><b class="emphasis">&lt;h3&gt;</b><ul>
+                                <li><b class="emphasis">&lt;h4&gt;</b><ul>
+                                    <li><b class="emphasis">&lt;h5&gt;</b><ul>
+                                        <li><b class="emphasis">&lt;h6&gt;</b></li>
+                                    </ul></li>
+                                </ul></li>
+                            </ul></li>
+                        </ul></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4><b class="emphasis">&lt;p&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;p&gt;</b> define um parágrafo.</p>
+
+            <h4><b class="emphasis">&lt;ul&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;ul&gt;</b> define uma lista desordenada.</p>
+            <p>Exemplo: <br>
+            <ul>
+                <li>Item 1 da lista.</li>
+                <li>Item 2 da lista.</li>
+                <li>Item 3 da lista.</li>
+                <li>E assim por diante...</li>
+            </ul></p>
+
+            <h4><b class="emphasis">&lt;ol&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;ol&gt;</b> define uma lista ordenada.</p>
+            <p>Exemplo: <br> 
+            <ol>
+                <li>Item 1 da lista.</li>
+                <li>Item 2 da lista.</li>
+                <li>Item 3 da lista.</li>
+                <li>E assim por diante...</li>
+            </ol></p>
+
+            <h4><b class="emphasis">&lt;i&gt;</b> e <b class="emphasis">&lt;em&gt;</b></h4>
+            <p>As tags <b class="emphasis">&lt;i&gt;</b> e <b class="emphasis">&lt;em&gt;</b> podem parecer fazer a mesma coisa, porém tem papéis diferentes. Enquanto a tag <b class="emphasis">&lt;i&gt;</b> define o <i>itálico</i> para auxiliar a leitura do usuário, a tag <b class="emphasis">&lt;em&gt;</b> define o <i>itálico</i> para auxiliar o navegador. Ou seja, a tag <b class="emphasis">&lt;i&gt;</b> é visual, enquanto a tag <b class="emphasis">&lt;em&gt;</b> é semântico.</p>
+            <p>Exemplo: <br>
+            <ul>
+                <li>Esta <i>palavra</i> em itálico ajuda a leitura do usuário.</li>
+                <li>Enquanto essa <i>palavra</i> em itálico ajuda o navegador.</li>
+            </ul></p>
+
+            <h4><b class="emphasis">&lt;b&gt;</b> e <b class="emphasis">&lt;strong&gt;</b></h4>
+            <p>Da mesma forma são as tags b e strong, enquanto a i define de forma visual, a strong define de forma semântica.</p>
+            <p>Exemplo: <br>
+            <ul>
+                <li>Esta <b>palavra</b> em negrito ajuda a leitura do usuário.</li>
+                <li>Enquanto esta <strong>palavra</strong> em negrito ajuda o navegador.</li>
+            </ul></p>
+
+            <h4><b class="emphasis">&lt;a&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;a&gt;</b> serve para a ancoragem, para linkar uma página com a outra, tanto interna quanto externa. Ela pode ser usada com alguns atributos.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">HTML</span>
+                </div>
+                <pre class="codigo"><code class="language-html">
+    &lt;a href="..." target="..."&gt;
+                </code></pre>
+            </div>
+
+            <h4><b class="emphasis">&lt;br&gt;</b> e <b class="emphasis">&lt;hr&gt;</b></h4>
+            <p>As tags <b class="emphasis">&lt;br&gt;</b> e <b class="emphasis">&lt;hr&gt;</b> tem seus papéis muito bem definidos, enquanto uma faz quebra de linha, a outra faz uma linha na horizontal da página, respectivamente.</p>
+
+            <h4><b class="emphasis">&lt;mark&gt;</b></h4>
+            <p>A tag <b class="emphasis">&lt;mark&gt;</b> pode parecer inútil a primeiro momento, pois tem a função de marcar uma palavra, ou texto, e o papel visual já é dado ao <b class="emphasis">CSS</b>. Porém, pensando de forma semântica, ela será usada para informar ao navegador que alí tem algo que merece atenção do usuário.</p>
+            <p>Exemplo: </p>
+            <ul>
+                <li>Esta <mark>palavra</mark> está marcada com a tag <b class="emphasis">&lt;mark&gt;</b>.</li>
+            </ul>
+
+            <h4>&lt;img&gt;</h4>
+            <p>A tag <b class="emphasis">&lt;img&gt;</b> é usada para exibir uma imagem em uma página <b class="emphasis">HTML</b> utilizndo os atributos <b class="emphasis">src="..."</b> (para o caminho da imagem) <b class="emphasis">alt="..."</b> (para texto alternativo) como os únicos obrigatórios. Essa tag é um elemento vázio, o que significa que não precisa de uma tag de fechamento.</p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">HTML</span>
+                </div>
+                <pre class="codigo"><code class="language-html">
+    &lt;img src="..." alt="..."&gt;
+                </code></pre>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
