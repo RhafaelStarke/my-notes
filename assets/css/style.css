@@ -186,6 +186,7 @@ h6 {
 
 li {
     line-height: 2;
+    text-align: justify;
 }
 
 .sorted-alpha {
