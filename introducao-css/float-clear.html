@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <style>
+        img {
+            float: right;
+            margin-left: 15px;
+            width: 200px;
+        }
+    </style>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seletores.html">Seletores</a></li>
+                        <li><a href="box-model.html">Box Model</a></li>
+                        <li><a href="pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="imagens.html">Imagens</a></li>
+                        <li><a href="" class="active">Float e Clear</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="paper-a4">
+        <section>
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Float e Clear</h3>
+
+            <h4><b class="emphasis">float</b> (Flutuar)</h4>
+            <p>A propriedade <b class="emphasis">float</b> tira o elemento do fluxo normal da página e o "empurra" para um dos lados (esquerda ou direita), permitindo que o texto e outros elementos de linha "flutuam" ao redor dele.</p>
+            <p>Valores: </p>
+            <ul>
+                <li><b class="emphasis">float: left;</b>: flutua à esquerda.</li>
+                <li><b class="emphasis">float: right;</b>: flutua à direita.</li>
+                <li><b class="emphasis">float: none;</b>: valor padrão (não flutua).</li>
+            </ul>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+img {
+    float: right; /*fixa a imagem à direita*/
+    margin-left: 15px; /*define uma margem para o texto não ficar colado*/
+    width: 200px /*define a largura da imagem*/
+}
+                </code></pre>
+            </div>
+            <br>
+
+            <br>
+            <img src="../assets/image/css3.png" alt="Logo do CSS3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium adipisci dolores aperiam sequi officia totam molestias quibusdam iusto ullam non magni ipsum aliquid reprehenderit, dolorum quisquam minima placeat quasi consectetur!</p>
+
+            <h5 style="clear: right;">Atenção</h5>
+            <p>Quando você usa <b class="emphasis">float</b>, você cria um "efeito colateral". O elemento flutuante sai do fluxo normal. Isso causa dois problemas comuns:</p>
+            <ol>
+                <li><b>O elemento seguinte tenta subir:</b> se você tem uma imagem flutuando e depois um título ou rodapé que deveria estar embaixo, esse elemento pode tentar subir para o espaço ao lado da imagem, assim como fez o texto, quebrando o layout.</li>
+                <li><b>O pai colapsa:</b> Se uma <b class="emphasis">div</b> contém apénas elementos flutuantes, a altura dela vira 0. A borda e o fundo da <b class="emphasis">div</b> somem, porque ela acha que está vazia (já que os filhos estão flutuando).</li>
+            </ol>
+
+            <h4><b class="emphasis">clear</b> (Limpar)</h4>
+            <p>A propriedade  <b class="emphasis">clear</b> serve para dizer ao navegador: "Pare de flutuar aqui! Quero começar uma nova linha limpa, abaixo de qualquer coisa que esteja flutuando."</p>
+            <p>Valores: </p>
+            <ul>
+                <li><b class="emphasis">clear: left;</b> não permite elementos flutuar à esquerda.</li>
+                <li><b class="emphasis">clear: right;</b> não permite elementos flutuar à direita.</li>
+                <li><b class="emphasis">clear: both;</b> o mais usado, não permite nada flutuando em nenhum dos lados.</li>
+            </ul>
+            <p>Exemplo: </p>
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+.imagem-lateral {
+    float: left;
+}
+
+.rodape {
+    clear: both; /*garante que o rodapé fique embaixo da imagem*/
+}
+                </code></pre>
+            </div>
+
+            <h4>Clearfix</h4>
+            <p>Lembra que eu disse que o container pai não reconhece seus filhos flutuantes, e fica com altura zero? </p>
+
+            <p>Antigamente, usávamos um "hack" chamado <b>clearfix</b> para resolver isso. Hoje existe uma solução moderna de uma linha só.</p>
+
+            <p>Se você tiver uma <b class="emphasis">div</b> com elementos flutuantes dentro, aplique essa propriedade:</p>
+
+            <div class="bloco-codigo">
+                <div class="bloco-codigo-header">
+                    <span class="linguagem">CSS</span>
+                </div>
+                <pre class="codigo"><code class="language-css">
+.container-pai {
+    display: flow-root;
+}
+                </code></pre>
+            </div>
+
+            <p>Isso força o pai a reconhecer a altura dos filhos flutuantes.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
