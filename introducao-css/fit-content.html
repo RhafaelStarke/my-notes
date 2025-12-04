@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes - Introdução ao CSS</title>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="seletores.html">Seletores</a></li>
+                        <li><a href="box-model.html">Box Model</a></li>
+                        <li><a href="pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="imagens.html">Imagens</a></li>
+                        <li><a href="float-clear.html">Float e Clear</a></li>
+                        <li><a href="" class="active">Fit-content</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="paper-a4">
+        <article>
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>Fit-content</h3>
+            
+            <section>
+                <h4><b class="emphasis">max-content</b></h4>
+
+                <p>O <b class="emphasis">max-content</b> diz ao navegador: "<b>Largura total! Não quebre a linha de jeito nenhum, a menos que eu peça com <b class="emphasis">&lt;br&gt;</b></b>".</p>
+
+                <ul>
+                    <li><b>Comportamento:</b> a caixa vai se alargar até que todo o conteúdo caiba em uma única linha.</li>
+                    <li><b>Perigo:</b> se o texto for muito longo, ele vai vazar para fora da tela e criar uma barra de rolage, horizontal.</li>
+                    <li><b>Uso:</b> bom para ícones com <i>labels</i> curtos ou quando você quer garantir que um título nunca quebre.</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h4><b class="emphasis">min-content</b></h4>
+                <p>O <b class="emphasis">min-content</b> diz ao navegador: "<b>Fique o menor possível, apertando tudo o que der.</b>".</p>
+                <ul>
+                    <li><b>Comportamento:</b> a caixa vai encolher até a largura da maior palavra (ou do elemento inquebrável, como uma imagem) dentro dela. O texto vai quebrar em várias linhas o máximo que puder.</li>
+                    <li><b>Uso:</b> útil para legendas de imagens ou colunas de tabelas que devem ser estreitas.</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h4><b class="emphasis">fit-content</b></h4>
+                <p>O <b class="emphasis">fit-content</b> é o melhor dos dois mundos. Ele diz: "<b>Use o espaço que o conteúdo precisa (<b class="emphasis">max-content</b>), mas se o espaço acabar, comece a quebrar a linha.</b>"</p>
+                <ul>
+                    <li><b>Comportamento:</b> <ul>
+                        <li>Se o texto é curto, ele age como <b class="emphasis">max-content</b>.</li>
+                        <li>Se o texto é longo, ele cresce até atingir o limite do elemento pai.</li>
+                        <li>A partir desse limite, ele para de crescer e quebra o texto (age como <b class="emphasis">auto</b>).</li>
+                    </ul></li>
+                    <li><b>Uso:</b> perfeito para centralizar blocos de conteúdo, botões ou tooltips.</li>
+                </ul>
+
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
