@@ -11,6 +11,47 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
+    <style>
+        .exemple-max-content {
+            width: max-content;
+        }
+
+        .exemple-min-content {
+            width: min-content;
+        }
+
+        .exemple-fit-content {
+            width: fit-content;
+        }
+
+        .bloco-codigo-exemple-content {
+            background-color: #282c34;
+            color: #abb2bf;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .over-flow {
+            overflow: visible;
+        }
+
+        .over-flow-hidden {
+            overflow: hidden;
+        }
+
+        .over-flow-scroll {
+            overflow: scroll;
+        }
+
+        .over-flow-auto {
+            overflow: auto;
+            text-overflow: ellipsis;
+        }
+    </style>
+
     <title>My Notes - Introdução ao CSS</title>
 </head>
 <body>
@@ -66,6 +107,28 @@
                     <li><b>Uso:</b> bom para ícones com <i>labels</i> curtos ou quando você quer garantir que um título nunca quebre.</li>
                 </ul>
 
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.exemple-max-content {
+    width: max-content;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-max-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
+
             </section>
 
             <section>
@@ -75,6 +138,28 @@
                     <li><b>Comportamento:</b> a caixa vai encolher até a largura da maior palavra (ou do elemento inquebrável, como uma imagem) dentro dela. O texto vai quebrar em várias linhas o máximo que puder.</li>
                     <li><b>Uso:</b> útil para legendas de imagens ou colunas de tabelas que devem ser estreitas.</li>
                 </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.exemple-min-content {
+    width: min-content;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-min-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
 
             </section>
 
@@ -89,6 +174,156 @@
                     </ul></li>
                     <li><b>Uso:</b> perfeito para centralizar blocos de conteúdo, botões ou tooltips.</li>
                 </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.exemple-fit-content {
+    width: fit-content;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-fit-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
+
+            </section>
+
+            <section>
+                <h4><b class="emphasis">over-flow</b></h4>
+                <p>A propriedade <b class="emphasis">over-flow</b> pode assumir quatro comportamentos diferentes.</p>
+
+                <h5><b class="emphasis">over-flow: visible</b> (O Padrão)</h5>
+
+                <ul>
+                    <li><b>O que faz:</b> o conteúdo transborda e vaza para a fora da caixa, ficando visível por cima de outros elementos.</li>
+                    <li><b>Resultado:</b> é bagunçado. O texto sai da borda.</li>
+                    <li><b>Quando usar:</b> geralmente é o comportamento que queremos evitar em caixas de texto, mas é útil quando você quer que algo saia da caixa.</li>
+                </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.over-flow {
+    overflow: visible;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-max-content over-flow"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
+
+                <h5><b class="emphasis">over-flow: hidden</b></h5>
+                <ul>
+                    <li><b>O que faz:</b> o conteúdo que não cabe é simplesmente cortado, ou escondido. O resto do conteúdo fica invisível e inacessível.</li>
+                    <li><b>Resultado:</b> a caixa fica limpa, respeitando o tamanho definido.</li>
+                    <li><b>Quando usar:</b>
+                    <ul>
+                        <li>Para criar efeitos de imagem (arredondar cantos de uma imagem dentro de uma div).</li>
+                        <li>Para esconder animações que saem da tela.</li>
+                        <li>Antigamente, era usado para corrigir problemas de <b class="emphasis">float</b>.</li>
+                    </ul></li>
+                </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.over-flow-hidden {
+    overflow: hidden;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content over-flow-hidden">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-max-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
+
+                <h5><b class="emphasis">over-flow: scrool</b></h5>
+                <ul>
+                    <li><b>O que faz:</b> adiciona barras de rolagem (scrollbars) na caixa, tanto na horizontal quanto na vertical.</li>
+                    <li><b>Detalhe importante:</b> as barras aparecem mesmo se não forem necessárias.</li>
+                    <li>Quando usar: raramente. Geeralmente preferimos o <b class="emphasis">auto</b>.</li>
+                </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.over-flow-scroll {
+    overflow: scroll;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content over-flow-scroll">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-max-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
+
+                <h5><b class="emphasis">over-flow: auto</b></h5>
+                <ul>
+                    <li><b>O que faz:</b> adiciona barras de rolagem apenas se forem necessárias.</li>
+                    <li><b>Resultado:</b> se o conteúdo couber, parece uma caixa normal. Se o conteúdo crescer, a barra de rolagem aparece automaticamente.</li>
+                    <li><b>Quando usar:</b> é a melhor opção para áreas de textos com rolagem, como blocos de códigos</li>
+                </ul>
+
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.over-flow-auto {
+    overflow: auto;
+}
+                    </code></pre>
+                </div>
+
+                <br><br>
+
+                <div class="bloco-codigo-exemple-content over-flow-auto">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">text</span>
+                    </div>
+                    <pre class="codigo exemple-max-content"><code class="language-css">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum qui incidunt vel doloribus fugiat quos vitae excepturi fugit sapiente, nostrum neque consequatur maxime distinctio quam quod, aperiam itaque unde.</p>
+                    </code></pre>
+                </div>
 
             </section>
 
