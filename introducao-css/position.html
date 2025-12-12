@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rhafael Starke">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <title>My Notes</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">My Notes</a></h1>
+        <nav>   
+            <ul>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="introducao-css/seletores.html">Seletores</a></li>
+                        <li><a href="introducao-css/box-model.html">Box Model</a></li>
+                        <li><a href="introducao-css/pseudo-classes.html">Pseudo Classes</a></li>
+                        <li><a href="introducao-css/estilo-lista.html">Estilo de Lista</a></li>
+                        <li><a href="introducao-css/imagens.html">Imagens</a></li>
+                        <li><a href="float-clear.html">Float e Clear</a></li>
+                        <li><a href="fit-content.html">Fit-content</a></li>
+                        <li><a href="" class="active">Position</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao Javascript</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle">Projetos Práticos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Em breve</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="paper-a4">
+            <h1>Curso de Web Developer</h1>
+            <h2>Rhafael da Cruz Starke</h2>
+            <h3>position</h3>
+
+            <p>Serve para tirar elementos do fluxo normal da página e coloca-los exatamente onde você quiser.</p>
+
+            <section>
+                <h4><b class="emphasis">position: static;</b> (o padrão)</h4>
+                <p>Todo elemento <b class="emphasis">HTML</b> nasce assim. Ele segue o fluxo normal da página (um bloco embaixo do outro).</p>
+                <ul>
+                    <li><b>Detalhe:</b> <b class="emphasis">top</b>, <b class="emphasis">left</b>, <b class="emphasis">z-index</b>, etc., <b>Não funcionam</b> aqui. Se você tentar usar, nada acontece.</li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h4><b class="emphasis">position: relative;</b> (o ajuste fine)</h4>
+                <p>O elemento continua ocupando seu espaço original no fluxo, mas você pode "empurrá-lo" visualmente para os lados, ou seja, ele se movimenta em relação a ele mesmo.</p>
+                <ul>
+                    <li><b>Comportamento:</b> se você usar <b class="emphasis">top:20px</b> ele desce 20px em relação a onde ele deveria estar.</li>
+                    <li><b>O fantasma:</b> o lugar original dele fica vazio, preservado, como se ele ainda estivesse lá.</li>
+                    <li><b>Uso principal:</b> ele serve como âncora para filhos como <b class="emphasis">position: absolute</b></li>
+                </ul>
+                
+            </section>
+
+            <section>
+                <h4><b class="emphasis">position: absolute;</b> (o rebelde)</h4>
+                <p>Este elemento é removido completamente do fluxo. É como se ele passasse a flutuar por cima da página. Os outros elementos agem como se ele não existesse e ocupam o seu lugar.</p>
+                <ul>
+                    <li><b>Regra de ouro:</b> o elemento absoluto vai se posicionar em relação ao primeiro pai que não seja <b class="emphasis">static</b>, ou seja, ele se movimenta em relação ao pai que tiver posicionado.
+                    <ul>
+                        <li>se o pai tiver <b class="emphasis">position: relative</b>, o filho absoluto fica preso dentro do pai.</li>
+                        <li>se nenhum pai tiver posição definida, ele vai se prender lá no topo do <b class="emphasis">body</b>.</li>
+                    </ul></li>
+                </ul>
+                
+            </section>
+
+            <section>
+                <h4><b class="emphasis">position: fixed;</b> (o adesivo)</h4>
+                <p>O elemento é removido do fulxo e posicionado em relação a janela do navegador, viewport.</p>
+                <ul>
+                    <li><b>Comportamento:</b> ele fica colado na tela. Se você rolar a página, o elemento não se mexe.</li>
+                    <li><b>Uso:</b> usado para menus, dessa forma ele fica sempre visível o topo, não importa o quanto você desça a página.</li>
+                </ul>
+                
+            </section>
+
+            <section>
+                <h4><b class="emphasis">position: sticky;</b> (o híbrido)</h4>
+                <p>É uma mistura de <b class="emphasis">relative</b> e <b class="emphasis">fixed</b>.</p>
+                <ul>
+                    <li><b>Comportamento:</b> o elemento age normalmente (rola junto com a página) até atingir uma posição específica (ex: <b class="emphasis">top:0</b>) Quando ele chega lá, ele gruda e vira <b class="emphasis">fixed</b>.</li>
+                    <li><b>Uso:</b> muito usado em tabelas (para fixar o cabeçalho) ou em barras laterais de anúncios que rolam até certo ponto e depois param.</li>
+                </ul>
+                
+            </section>
+
+            <section>
+                <h4>Dica de ouro: <b class="emphasis">z-index</b></h4>
+                <p>O <b class="emphasis">z-index</b> (que controla quem fica em cima de quem) só funciona se o elemento tiver <b class="emphasis">position</b> definido como <b class="emphasis">relative</b>, <b class="emphasis">absolute</b> ou <b class="emphasis">fixed</b>. Elementos <b class="emphasis">static</b> ignoram o <b class="emphasis">z-index</b>.</p>
+
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Usina3k. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
