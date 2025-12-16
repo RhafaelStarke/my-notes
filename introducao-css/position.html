@@ -20,8 +20,8 @@
             <ul>
                 <li class="dropdown"><a href="" class="dropdown-toggle">Introdução ao HTML</a>
                     <ul class="dropdown-menu">
-                        <li><a href="introducao-html/principais-tags.html">Principais Tags</a></li>
-                        <li><a href="introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
+                        <li><a href="../introducao-html/principais-tags.html">Principais Tags</a></li>
+                        <li><a href="../introducao-html/tags-semanticas.html">Tags Semânticas</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="" class="dropdown-toggle active">Introdução ao CSS</a>
@@ -112,8 +112,50 @@
             </section>
 
             <section>
-                <h4>Dica de ouro: <b class="emphasis">z-index</b></h4>
+                <h4>Dica de ouro: contexto de empilhamento do <b class="emphasis">z-index</b> (stacking context)</h4>
                 <p>O <b class="emphasis">z-index</b> (que controla quem fica em cima de quem) só funciona se o elemento tiver <b class="emphasis">position</b> definido como <b class="emphasis">relative</b>, <b class="emphasis">absolute</b> ou <b class="emphasis">fixed</b>. Elementos <b class="emphasis">static</b> ignoram o <b class="emphasis">z-index</b>.</p>
+
+                <p>Muita gente acha que o <b class="emphasis">z-index</b> é uma competição global, onde quem tem o maior número ganha. <b>Não é bem assim</b>.</p>
+
+                <p>O <b class="emphasis">z-index</b> funciona dentro de hierarquias.</p>
+
+                <p>Imagine duas caixas (Pai A e Pai B).</p>
+                <ul>
+                    <li>Se o <b>Pai A</b> tem <b class="emphasis">z-index:10;</b>.</li>
+                    <li>E o <b>Pai B</b> tem <b class="emphasis">z-index:20;</b>.</li>
+                </ul>
+                <p>O Pai B vai cobrir o Pai A. E aqui está o segredo:</p>
+                <ul>
+                    <li>Se você tiver um elemento filho dentro do <b>Pai A</b> com <b class="emphasis">z-index:9999;</b>, ele <b>AINDA VAI FICAR ATRÁS</b> do <b>Pai B</b>.</li>
+                </ul>
+
+                <p><b>Por que?</b> Porque o filho está preso dentro do nível do pai. Se o pai perdeu a briga de altura, o filho perde junto, não importa quão alto seja o número dele. Ele é o rei... Mas apenas dentro do castelo dele.</p>
+
+                <h4>Boas Práticas (evite a guerra dos 9)</h4>
+                <p>Evite fazer isso:</p>
+                <div class="bloco-codigo">
+                    <div class="bloco-codigo-header">
+                        <span class="linguagem">CSS</span>
+                    </div>
+                    <pre class="codigo"><code class="language-css">
+.header {
+    z-index: 999999;
+}
+
+.modal {
+    z-index: 9999999;
+}
+                    </code></pre>
+                </div>
+
+                <p>Isso vira bagunça impossível de manter. Tente criar uma escala lógica no seu projeto: </p>
+                <ul>
+                    <li>Camada base (conteúdo): 1.</li>
+                    <li>Camada de decorações: -1.</li>
+                    <li>Dropdowns e menus: 100.</li>
+                    <li>Header fixo: 1000.</li>
+                    <li>Modais/Popups: 2000.</li>
+                </ul>
 
             </section>
 

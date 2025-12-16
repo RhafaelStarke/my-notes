@@ -244,6 +244,7 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: auto;
+  margin: 20px 0 40px 0;
 }
 
 .bloco-codigo-header {
